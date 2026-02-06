@@ -14,5 +14,3 @@ for i in range(n):
 print("\nMatriz identidad:")
 for fila in identidad:
     print(fila)
-    
-

@@ -21,3 +21,4 @@ for j in range(m):
 
     if suma_columna > 50: 
         print(f"La columna {j} ha excedido la cantidad")
+        
