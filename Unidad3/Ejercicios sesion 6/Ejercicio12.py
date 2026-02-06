@@ -1,7 +1,5 @@
-# Lista para guardar los puntos
 puntos = []
 
-# Número de puntos
 n = int(input("¿Cuántos puntos quieres introducir? "))
 
 for i in range(n):
@@ -9,8 +7,7 @@ for i in range(n):
     x = float(input("Ingresa coordenada x: "))
     y = float(input("Ingresa coordenada y: "))
     z = float(input("Ingresa coordenada z: "))
-    
-    # Determinar octante
+   
     if x > 0 and y > 0 and z > 0:
         octante = 1
     elif x < 0 and y > 0 and z > 0:
@@ -28,13 +25,11 @@ for i in range(n):
     elif x > 0 and y < 0 and z < 0:
         octante = 8
     else:
-        octante = 0  # Punto sobre algún plano
-    
-    # Guardar el punto como tupla de 4 elementos
+        octante = 0  
+   
     punto = (x, y, z, octante)
     puntos.append(punto)
 
-# Mostrar todos los puntos
 print("\nPuntos ingresados:")
 for p in puntos:
     x, y, z, octante = p

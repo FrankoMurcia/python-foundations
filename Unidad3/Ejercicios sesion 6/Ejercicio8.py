@@ -7,7 +7,7 @@ try:
     response.raise_for_status()
     data = response.json()
 
-    # Crear diccionario por raza
+    
     razas = {}
 
     for character in data["items"]:
@@ -16,14 +16,14 @@ try:
             razas[raza] = []
         razas[raza].append(character)
 
-    # Imprimir por raza con promedio de Ki
+    
     for raza, personajes in razas.items():
         print(f"\n--- Raza: {raza} ---")
         total_ki = 0
         count = 0
         for p in personajes:
             nombre = p.get("name")
-            ki_str = str(p.get("ki", "0")).replace(".", "").replace(",", "")  # Quitar separadores
+            ki_str = str(p.get("ki", "0")).replace(".", "").replace(",", "")  
             try:
                 ki = int(ki_str)
             except ValueError:
